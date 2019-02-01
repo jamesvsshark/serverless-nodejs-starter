@@ -1,4 +1,4 @@
-import * as handler from '../handler';
+import * as handler from '../src/handler';
 
 test('hello', async () => {
   const event = 'event';

@@ -27,8 +27,21 @@ provider:
 
 functions:
   hello:
-    handler: handler.hello
+    handler: src/handler.hello
     events:
       - http:
           path: hello
           method: get
+  graphql:
+    handler: src/graphql.graphqlHandler
+    events:
+      - http:
+          path: graphql
+          method: post
+  neo4j:
+    handler: src/neo4j/neo4j.neo4jHandler
+    events:
+      - http:
+          path: neo4j
+          method: post
+
